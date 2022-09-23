@@ -3,6 +3,7 @@ const axios = require("axios");
 class CoinAPI {
   constructor() {
     this.apiUrl = "https://api.coindesk.com/v1/bpi/historical/close.json";
+    this.apiUrl2 = "https://api.coindesk.com/v1/bpi/currentprice.json";
   }
 
   // eslint-disable-next-line class-methods-use-this
