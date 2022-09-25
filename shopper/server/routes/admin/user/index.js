@@ -25,7 +25,7 @@ module.exports = () => {
   });
 
   // Save or update user
-  router.post("/", async (req, res, next) => {
+  router.post("/", async (req, res) => {
     const email = req.body.email.trim();
     const password = req.body.password.trim();
     // Add this here because on update we might want to keep the password as it is
