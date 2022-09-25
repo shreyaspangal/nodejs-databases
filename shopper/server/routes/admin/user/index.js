@@ -67,7 +67,7 @@ module.exports = () => {
   });
 
   // Delete user
-  router.get("/delete/:userId", async (req, res, next) => {
+  router.get("/delete/:userId", async (req, res) => {
     try {
       await UserService.remove(req.params.userId);
     } catch (err) {
@@ -87,7 +87,7 @@ module.exports = () => {
     return res.redirect("/admin/user");
   });
 
-  router.get("/impersonate/:userId", (req, res, next) => {
+  router.get("/impersonate/:userId", (req, res) => {
     req.session.userId = req.params.userId;
     req.session.messages.push({
       type: "success",
